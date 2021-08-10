@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocknLock | 락앤락과 함께하는 건강한 주방생활</title>
+    <link rel="stylesheet" href="css/index.css">
     <script src="index.js"></script>
 
-    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     
 
-    <!-- <header class="header"> -->
-    <header style="display: none;" class="header">
-        <div class="header_wrap ">
-            <span class="logo"><a href="#">
-                락앤락</a>
+    <header class="header">
+        <div class="header_wrap">
+            <span class="logo">
+                <a href="#">
+                    <svg class="header__svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 18">
+                        <path d="M0 0h3.67v14.39h8.14v3.26H0zm40.82 17.65h3.32v-4.4l1.28-1.31 3.32 5.71h4l-5.05-8.08 4.56-4.7h-3.93l-4.18 4.6V0h-3.32zm26.42 0H79v-3.26h-8.09V0h-3.67zm40.81 0h3.32v-4.4l1.29-1.31 3.34 5.71h4l-5.07-8.08 4.56-4.7h-3.93l-4.19 4.6V0h-3.32zm-88.9-2.29c-2.25 0-2.93-2.06-2.93-4.08s.68-4.11 2.93-4.11 2.94 2.05 2.94 4.11-.68 4.08-2.94 4.08m0-10.84c-3.79 0-6.25 2.68-6.25 6.76S15.36 18 19.15 18s6.26-2.67 6.26-6.72S23 4.52 19.15 4.52m19.66 4.85C38.6 6.11 36 4.53 33.13 4.53 29.2 4.53 27 7.47 27 11.45c0 3.83 2.41 6.55 6.06 6.55a5.5 5.5 0 005.82-5.24h-3.2A2.62 2.62 0 0133 15.35c-2.08 0-2.76-2.2-2.76-4S31 7.17 33.1 7.17a2.31 2.31 0 012.46 2.2zm15 8.28h3.32V11c0-2.59.77-3.66 2.57-3.66 1.54 0 2.13 1 2.13 3.14v7.22h3.32V9.79c0-3.16-.89-5.27-4.42-5.27A4.27 4.27 0 0057 6.65V4.87h-3.18zm32.56-2.29c-2.24 0-2.92-2.06-2.92-4.08s.68-4.11 2.92-4.11 3 2.05 3 4.11-.68 4.08-3 4.08m0-10.84c-3.79 0-6.24 2.68-6.24 6.76S82.59 18 86.38 18s6.27-2.67 6.27-6.72-2.46-6.76-6.27-6.76M106 9.37c-.21-3.26-2.83-4.84-5.68-4.84-3.93 0-6.17 2.94-6.17 6.92 0 3.83 2.45 6.55 6.1 6.55a5.5 5.5 0 005.82-5.24h-3.2a2.61 2.61 0 01-2.64 2.59c-2.08 0-2.76-2.2-2.76-4s.7-4.15 2.83-4.15a2.3 2.3 0 012.45 2.2z" fill="#1d1d1b"></path>
+                        </svg>
+                </a>
             </span>
             <ul class="dep1_menu_wrap ">
                 <li class="dep1_menus">
@@ -32,9 +35,10 @@
                 </li>
                 <li class="dep1_menus">
                     <a href="#"> Product </a>
-                    <ul class="dep2_menu">
-                        <div class="sub_wrap">
-                            <!-- <li><a href="#"><span>Food Container</span></a>
+                    <div class="sub_wrap">
+                        <ul class="dep2_menus">
+                            <li class="dep2_menu">
+                                <a href="#"><span>Food Container</span></a>
                                     <ul>
                                         <a href="#"><li>일반식품 보관</li></a>
                                         <a href="#"><li>밥 보관</li></a>
@@ -44,7 +48,8 @@
                                         <a href="#"><li>간편하게 조리</li></a>
                                     </ul>
                             </li>
-                            <li><a href="#">Beverageware</a>
+                            <li class="dep2_menu">
+                                <a href="#"><span>Beverageware</span></a>
                                 <ul>
                                     <a href="#"><li>온-더-고</li></a>
                                     <a href="#"><li>온-더-테이블</li></a>
@@ -54,52 +59,59 @@
                                     <a href="#"><li>키즈</li></a>
                                 </ul>
                             </li>
-                            <li><a href="#">Cookware</a>
+                            <li class="dep2_menu">
+                                <a href="#">Cookware</a>
                                 <ul>
                                     <a href="#"><li>스페셜 디자인</li></a>
                                     <a href="#"><li>편리한 사용</li></a>
                                 </ul>
                             </li>
-                            <li><a href="#">Small Appliance</a>
+                            <li class="dep2_menu">
+                                <a href="#">Small Appliance</a>
                                 <ul>
                                     <a href="#"><li>주방</li></a>
                                     <a href="#"><li>케어</li></a>
                                 </ul>
                             </li>
-                            <li><a href="#">E-Catalog</a></li>
-                        </div>
-                    </ul>
+                            <li class="dep2_menu">
+                                <a href="#">E-Catalog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> 
+                <li class="dep1_menus">
+                    <a href="#"> Innovation </a>
+                    <div class="sub_wrap">
+                        <ul class="dep2_menus">
+                            <li class="dep2_menu"><a href="#">LL Lap</a></li>
+                            <li class="dep2_menu"><a href="#">Design Center</a></li> 
+                        </ul>
+                    </div>
                 </li>
-                <li class="dep1_menus"><a href="#"> Innovation </a>
-                    <ul class="dep2_menus">
-                        <div class="sub_wrap">
-
-                            <li><a href="#">LL Lap</a></li>
-                            <li><a href="#">Design Center</a></li> -->
-                        </div>
-                    </ul>
-                </li>
-                <li class="dep1_menus"><a href="#"> Story </a>
-                    <ul class="dep2_menus">
-                        <!-- <div class="sub_wrap">
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Lounge</a></li>
-                            <li><a href="#">Now</a></li>
-                        </div> -->
-                    </ul>
+                <li class="dep1_menus">
+                    <a href="#"> Story </a>
+                    <div class="sub_wrap">
+                        <ul class="dep2_menus">
+                            <li class="dep2_menu"><a href="#">News</a></li>
+                            <li class="dep2_menu"><a href="#">Lounge</a></li>
+                            <li class="dep2_menu"><a href="#">Now</a></li>
+                        </ul>
+                    </div> 
                 </li>
                 <li class="dep1_menus"><a href="#"> Career </a>
-                    <ul class="dep2_menus">
-                        <!-- <div class="sub_wrap">
-                            <li><a href="#">사내문화</a></li>
-                            <li><a href="#">채용모집</a></li>
-                        </div> -->
-                    </ul>
+                    <div class="sub_wrap">
+                        <ul class="dep2_menus">
+                            <li class="dep2_menu"><a href="#">사내문화</a></li>
+                            <li class="dep2_menu"><a href="#">채용모집</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
             <div class="menu_icons">
-                <p class="eng_trans">ENG</p>
-                <a href="" class="icon_search"><span>돋보기</span></a>
+                <div class="lang_for">
+                    <button class="current_lang">ENG</button>
+                </div>
+                <a href="" class="icon_search"><span></span></a>
             </div>
         </div>
     </header>
@@ -135,7 +147,7 @@
         <div class="section_txt">
             <h2 class="section_txt_tit">안심하고 담다.<br>락앤락 밀폐용기</h2>
             <span class="section_txt_sub"> 우리의 라이프 스타일을 이해하고 영감을 얻어 불편함은 줄이고 안심을 더합니다.</span>
-            <br><a href=""><span class="btn_next">더보기</span></a>
+            <br><a href="" class="btn_next"><span >더보기</span></a>
         </div>
     </section>
     <section class="section_tumblr">
@@ -146,7 +158,7 @@
         <div class="section_txt">
             <h2 class="section_txt_tit">이야기를 담다.<br>락앤락 텀블러</h2>
             <span class="section_txt_sub"> 우리의 순간에 가장 어울리는 디자인과 기능으로 무엇을 담든 어디에서 사용하든 이야기가 됩니다.</span>
-            <br><a href=""><span class="btn_next">더보기</span></a>        
+            <br><a href="" class="btn_next"><span>더보기</span></a>        
         </div>
     </section>
     <section class="section_cookware">
@@ -158,7 +170,7 @@
         <div class="section_txt">
             <h2 class="section_txt_tit">편안함을 담다.<br>락앤락 쿡웨어</h2>
             <span class="section_txt_sub"> 요리하는 과정부터 차려내는 순간까지 편안한 사용감과 감성적인 디자인으로 요리하는 즐거움을 느껴보세요.</span>
-            <br><a href=""><span class="btn_next">더보기</span></a>         
+            <br><a href="" class="btn_next"><span>더보기</span></a>         
         </div>
     </section>
     <section class="section_appliances">
@@ -170,21 +182,23 @@
         <div class="section_txt">
             <h2 class="section_txt_tit">편리함을 담다.<br>락앤락 소형가전</h2>
             <span class="section_txt_sub"> 요리는 더욱 편하고 맛있게, 생활은 더욱 안심할 수 있도록 당신의 생활 곳곳, 우리의 손길이 닿아 일상을 보다 풍요롭게! </span>
-            <br><a href=""><span class="btn_next">더보기</span></a>         
+            <br><a href="" class="btn_next"><span>더보기</span></a>         
         </div>
     </section>
     <section class="section_news">
         <div class="section_news_in">
             <div class="section_header">
                 <h2>News</h2>
-                <a href="#">
-                    <span>더보기</span>
+                <a class="btn_more_wrap" href="#">
+                    <span></span>
                 </a>
             </div>
             <ul>
                 <li>
-                    <a href="">
-                        <span><img src="img/index/50337501yegz.jpg" alt=""></span>
+                    <a href="" class="news_effect">
+                        <div class="news_img">
+                            <img src="img/index/50337501yegz.jpg" alt="">
+                        </div>
                         <div class="news_text_block">
                             <span class="news_bg_txt">프로모션</span>
                             <strong><span>락앤락, 자사몰 리뉴얼 기념 ‘인기상품 0원 프로모션’ 진행 </span></strong>
@@ -198,8 +212,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <span><img src="img/index/50064509kioo.jpg" alt=""></span>
+                    <a href=""  class="news_effect">
+                        <div class="news_img">
+                            <img src="img/index/50064509kioo.jpg" alt="">
+                        </div>
                         <div class="news_text_block">
                             <span class="news_bg_txt">제품</span>
                             <strong><span>락앤락, 인덕션에 최적화된 인테리어 쿡웨어  ‘슈트 IH 시리즈’ 출시 </span></strong>
@@ -213,8 +229,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <span><img src="img/index/49468751shcn.png" alt=""></span>
+                    <a href=""  class="news_effect">
+                        <div class="news_img">
+                            <img src="img/index/49468751shcn.png" alt="">
+                        </div>
                         <div class="news_text_block">
                             <span class="news_bg_txt">사회공헌</span>
                             <strong><span>락앤락, 코바코와 함께 다회용기 사용 장려 ‘애착용기 캠페인’ 진행 </span></strong>
@@ -234,19 +252,16 @@
         <div class="section_lounge_in">
             <div class="section_header">
                 <h2>Lounge</h2>
-                <a href="#">
-                    <span>더보기</span>
-                </a>            
+                <a href="#" class=""></a>            
             </div>
             <div class="slider">
                 <ul>
                     <li>
                         <a href="">
-                            <div class="bg">
-                                <picture>
-                                    <img src="img/index/50427039ifet.jpg" alt="">  
-                                </picture>
-                            </div>
+                            <picture class="bg">
+                                <source srcset="img/index/50427039ifet.jpg" media="(min-width: 720px)">
+                                <img src="img/index/50427046xirr.jpg" alt="">
+                            </picture>
                             <div class="slide_txt">
                                 <strong><span>[월간 라운지] #Tumbler - 너에게 주고 싶은 나의 텀블러</span></strong>
                                 <div class="target_box">
@@ -290,16 +305,18 @@
                     </li> -->
                 </ul>
                 <div class="control_box">
-                    <div class="control_bar">
-                        <span></span>
+                    <div class="control_bar_wrap">
+                        <div class="control_bar">
+                            <span class="control_checked"></span>
+                        </div>
                     </div>
                     <div class="controller">
-                        <button>"<"</button>
-                        <div>
-                            <span>1</span>
-                            <span>3</span>
+                        <button class="btn_swipe_prev"></button>
+                        <div class="swipe_num">
+                            <span class="swipe_current">1</span> /
+                            <span class="swipe_length">3</span>
                         </div>
-                        <button>">"</button>
+                        <button class="btn_swipe_next"></button>
                     </div>
                 </div>
             </div>
@@ -318,7 +335,7 @@
                 </div>
                 <div class="contact_pad2">
                     <h3 class="h3_txt">자주 찾는 질문</h3>
-                    <div>
+                    <div class="qna_btns">
                         <a href="">식품용기</a>
                         <a href="">보온병/텀블러</a>
                         <a href="">쿡웨어</a>
@@ -343,53 +360,69 @@
                 한국 최고의 주방생활문화기업에서<br>
                 전 세계인의 사랑 받는 글로벌 기업으로 도약합니다.
             </h2>
-            <a href=""><span class="btn_banner">더보기</span></a>
+            <a href="" class="btn_next"><span>더보기</span></a>
         </div>
     </div>
+
     <section class="section_now">
-        <div class="section_in">
-            <div class="section_header">
-                <h2>Now</h2>
-                <a href="">더보기</a>
+        <div class="section_wrap">
+            <div class="section_in">
+                <div class="section_header">
+                    <h2>Now</h2>
+                    <a href=""></a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="">
+                            <span class="now_img_wrap">
+                                <img src="img/index/49802366ggvj.jpg" alt="">
+                            </span>
+                            <span class="icon_insta"> </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="now_img_wrap">
+                                <img src="img/index/49801992mcoh.jpg" alt="">
+                            </span>
+                            <span class="icon_insta"> </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="now_img_wrap">
+                                <img src="img/index/49802018orrx.jpg" alt="">
+                            </span>
+                            <span class="icon_insta"> </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="now_img_wrap">
+                                <img src="img/index/49734616pgky.jpg" alt="">
+                            </span>
+                            <span class="icon_insta"> </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="now_img_wrap">
+                                <img src="img/index/49734518ujvf.jpg" alt="">
+                            </span>
+                            <span class="icon_insta"> </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="now_img_wrap">
+                                <img src="img/index/49734240wnlf.jpg" alt="">
+                            </span>
+                            <span class="icon_insta"> </span>
+                            
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <ul>
-                <li>
-                    <a href="">
-                        <span class="now_img_wrap"><img src="img/index/49802366ggvj.jpg" alt=""></span>
-                        <span class="icon_insta">instagram </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="now_img_wrap"><img src="img/index/49801992mcoh.jpg" alt=""></span>
-                        <span class="icon_insta">instagram </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="now_img_wrap"><img src="img/index/49802018orrx.jpg" alt=""></span>
-                        <span class="icon_insta">instagram </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="now_img_wrap"><img src="img/index/49734616pgky.jpg" alt=""></span>
-                        <span class="icon_insta">instagram </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="now_img_wrap"><img src="img/index/49734518ujvf.jpg" alt=""></span>
-                        <span class="icon_insta">instagram </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="now_img_wrap"><img src="img/index/49734240wnlf.jpg" alt=""></span>
-                        <span class="icon_insta">instagram </span>
-                    </a>
-                </li>
-            </ul>
         </div>
     </section>
 

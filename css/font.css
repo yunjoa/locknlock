@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'icon';
+    src: url("../font/icon.woff2") format("woff2")}
+  
+  .icon {
+    display: inline-block;
+    font-family: 'icon';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none; }
+  
+  .icon-arrow-down-bold:before {
+    content: '\ea01'; }
+  
+  .icon-arrow-down:before {
+    content: '\ea02'; }
+  
+  .icon-arrow-left-bold:before {
+    content: '\ea03'; }
+  
+  .icon-arrow-left:before {
+    content: '\ea04'; }
+  
+  .icon-arrow-right-bold:before {
+    content: '\ea05'; }
+  
+  .icon-arrow-right:before {
+    content: '\ea06'; }
+  
+  .icon-arrow-up-bold:before {
+    content: '\ea07'; }
+  
+  .icon-arrow-up:before {
+    content: '\ea08'; }
+  
+  .icon-backtotop:before {
+    content: '\ea09'; }
+  
+  .icon-check:before {
+    content: '\ea0a'; }
+  
+  .icon-close:before {
+    content: '\ea0b'; }
+  
+  .icon-download:before {
+    content: '\ea0c'; }
+  
+  .icon-error:before {
+    content: '\ea0d'; }
+  
+  .icon-locknlockmall:before {
+    content: '\ea0e'; }
+  
+  .icon-new-window:before {
+    content: '\ea0f'; }
+  
+  .icon-pause:before {
+    content: '\ea10'; }
+  
+  .icon-play-round:before {
+    content: '\ea11'; }
+  
+  .icon-play:before {
+    content: '\ea12'; }
+  
+  .icon-plus:before {
+    content: '\ea13'; }
+  
+  .icon-refresh:before {
+    content: '\ea14'; }
+  
+  .icon-search:before {
+    content: '\ea15'; }
+  
+  .icon-sns-blog:before {
+    content: '\ea16'; }
+  
+  .icon-sns-facebook:before {
+    content: '\ea17'; }
+  
+  .icon-sns-instagram:before {
+    content: '\ea18'; }
+  
+  .icon-sns-youtube:before {
+    content: '\ea19'; }
+  
+  .icon-sound:before {
+    content: '\ea1a'; }
+  
+  .icon-success:before {
+    content: '\ea1b'; }

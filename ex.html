@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div id="list">
+        <div class="line_one">om nom nom nom...</div>
+        <div class="line_two">18 foods to make you incredibly hungry</div>
+    </div>
+    
+
+    <div class="bg"></div>
+
+<style>
+
+
+.bg{
+  background: chartreuse;
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+.bg::after{
+                            content: '';
+                            position: absolute;
+                            top: 0; left: 0; right: 0; bottom: 0;
+                            background: linear-gradient(
+                                0deg, rgba(16, 24, 32, 0.3), rgba(16, 24, 32, 0.2), rgba(16, 24, 32, 0));;
+                        }
+    #list {
+  display:block;
+  position: relative; 
+
+  transition: all 1s ease;
+
+
+#list::after {
+  content: "";
+  background: url('img/life-lg.jpg');
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+#list:hover::after {
+  opacity: 0.5;
+}
+</style>
+</body>
+</html>

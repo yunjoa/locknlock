@@ -1,39 +1,39 @@
-@import '_mixin.scss';
+// @import '_mixin.scss';
 
 
-*{margin: 0; padding: 0; box-sizing: border-box;
-    font-family: "NotoSans", sans-serif; color: #333;
-    font-size: 1rem; font-size: 1rem; line-height: 1.6;
-    list-style:none;
-}
+// *{margin: 0; padding: 0; box-sizing: border-box;
+//     font-family: "NotoSans", sans-serif; color: #333;
+//     font-size: 1rem; font-size: 1rem; line-height: 1.6;
+//     list-style:none;
+// }
 
 
-.section_cover_wrap{
-    .section_cover{
-        @include section;
-        border: solid 1px royalblue;
-        background: grey;
-        .s_content{
-            @include sectionAbsolute;
-        }
-    }
-}
-.section_philosophy_wrap{
-    .section_philosophy{
-        @include section;
-        border: red solid 1px;
-        background: rosybrown;
-        .s_content{
-            @include sectionAbsolute;
-        }
-    }
-}
-.section_application_wrap{
-    .section_application{
-        border: royalblue 1px solid;
-        @include section;
-        .s_content{
-            @include sectionAbsolute;
-        }
-    }
-}
+// .section_cover_wrap{
+//     .section_cover{
+//         @include section;
+//         border: solid 1px royalblue;
+//         background: grey;
+//         .s_content{
+//             @include sectionAbsolute;
+//         }
+//     }
+// }
+// .section_philosophy_wrap{
+//     .section_philosophy{
+//         @include section;
+//         border: red solid 1px;
+//         background: rosybrown;
+//         .s_content{
+//             @include sectionAbsolute;
+//         }
+//     }
+// }
+// .section_application_wrap{
+//     .section_application{
+//         border: royalblue 1px solid;
+//         @include section;
+//         .s_content{
+//             @include sectionAbsolute;
+//         }
+//     }
+// }
