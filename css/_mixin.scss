@@ -1,4 +1,10 @@
 
+//common
+
+p, span{
+    word-break: keep-all;
+    word-wrap: break-word;
+}
 
 // font
 
@@ -171,7 +177,7 @@
 
 @mixin sec_txt_b20{
         position: absolute;
-        top: 60%; left: 20%;
+        top: 55%; left: 20%;
         .section_txt_tit_b{
             color: white;
             font-size: 3.5rem;

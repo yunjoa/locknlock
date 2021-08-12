@@ -1,39 +1,66 @@
-// @import '_mixin.scss';
+@import '_mixin.scss';
 
 
-// *{margin: 0; padding: 0; box-sizing: border-box;
-//     font-family: "NotoSans", sans-serif; color: #333;
-//     font-size: 1rem; font-size: 1rem; line-height: 1.6;
-//     list-style:none;
-// }
+*{margin: 0; padding: 0; box-sizing: border-box;
+    font-family: "NotoSans", sans-serif; color: #333;
+    font-size: 1rem; font-size: 1rem; line-height: 1.6;
+    list-style:none;
+}
+
+a{text-decoration-line:none;}
+video, img{max-width: 100%; object-fit: cover; vertical-align: bottom;}
+button{padding: 0; border: 0; background: transparent;}
+section{display: block;}
 
 
-// .section_cover_wrap{
-//     .section_cover{
-//         @include section;
-//         border: solid 1px royalblue;
-//         background: grey;
-//         .s_content{
-//             @include sectionAbsolute;
-//         }
-//     }
-// }
-// .section_philosophy_wrap{
-//     .section_philosophy{
-//         @include section;
-//         border: red solid 1px;
-//         background: rosybrown;
-//         .s_content{
-//             @include sectionAbsolute;
-//         }
-//     }
-// }
-// .section_application_wrap{
-//     .section_application{
-//         border: royalblue 1px solid;
-//         @include section;
-//         .s_content{
-//             @include sectionAbsolute;
-//         }
-//     }
-// }
+
+
+
+
+.section_cover_wrap{
+    .section_cover{
+        @include sectionHeight;
+        @include img_fit;
+        border: rgb(56, 2, 2) solid 3px;
+        .s_content{
+            width: 60%;
+            @include sectionAbsoluteCenter;
+            .intro_top{
+                span{
+                    display: inline-block;
+                    padding: 0 0 50px;
+                    img{
+                        width: 80%
+                    }
+                }
+            }
+            .intro_content{
+                p{
+                    width: 500px;
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                    font-weight: 500;
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+}
+.section_philosophy_wrap{
+    .section_philosophy{
+        @include sec_comb;
+        background: rosybrown;
+        .s_content{
+            @include sectionAbsolute;
+        }
+    }
+}
+.section_application_wrap{
+    .section_application{
+        border: royalblue 1px solid;
+        @include sec_comb;
+        .s_content{
+            @include sectionAbsolute;
+        }
+    }
+}

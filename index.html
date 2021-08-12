@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocknLock | 락앤락과 함께하는 건강한 주방생활</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="css/slick.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>    
+    <script src="js/index.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script ></script>
 
 </head>
 <body>
     
-
-    <header class="header">
+    
+    <header class="header" >
         <div class="header_wrap">
             <span class="logo">
                 <a href="#">
@@ -118,26 +123,25 @@
 
     <section class="section_visual">
         <div class="section_visual_in">
-            <ul class="bg_main">
+            <ul class="bg_main main_slider">
                 <li>
-                    <div class="bg">
-                        <video class="bg_video" poster="img/index/46728878suko.jpg"
-                        src="https://www.locknlock.com/kor/image/common/main/main-hero-0-lg.mp4" playsinline loop muted autoplay></video>
+                    <video class="bg_video" poster="img/index/46728916avsk.jpg" src="https://www.locknlock.com/kor/image/common/main/main-hero-0-lg.mp4" 
+                    playsinline loop muted autoplay></video>
+                    <div class="section_txt">
+                        <h2 class="section_txt_tit_b">좋은 것을 담다</h2>
+                        <span class="section_txt_tit_s"> 락앤락이 제안하는 더 나은 생활</span>
                     </div>
                 </li>
+                <li>
+                    <video class="bg_video" poster="img/index/46728878suko.jpg" src="https://www.locknlock.com/kor/image/common/main/main-hero-1-lg.mp4" playsinline loop muted autoplay></video>
+                    <div class="section_txt">
+                        <h2 class="section_txt_tit_b">생활을 담다</h2>
+                        <span class="section_txt_tit_s"> 락앤락이 제안하는 더 나은 생활</span>
+                    </div>
+                </li> 
             </ul>
-        <div>
-        <div class="section_txt">
-            <h2 class="section_txt_tit_b">좋은 것을 담다</h2>
-            <span class="section_txt_tit_s"> 락앤락이 제안하는 더 나은 생활</span>
         </div>
-        <!-- <div class="section_visual_in">
-            <img src="img/46731309krub.jpg" alt="">
-        </div>
-        <div class="section_txt">
-            <h2 class="section_txt_tit">생활을 담다</h2>
-            <span> 락앤락이 제안하는 더 나은 생활</span>
-        </div> -->
+
     </section>
     <section class="section_container">
         <picture class="bg">
@@ -248,14 +252,18 @@
             </ul>
         </div>
     </section>
+
+
+    FIXME: 2번 슬라이드
+
     <section class="section_lounge">
         <div class="section_lounge_in">
             <div class="section_header">
                 <h2>Lounge</h2>
-                <a href="#" class=""></a>            
+                <a href="" class=""></a>            
             </div>
-            <div class="slider">
-                <ul>
+            <div class="sliders">
+                <ul class="lounge_slider">
                     <li>
                         <a href="">
                             <picture class="bg">
@@ -271,7 +279,7 @@
                             </div>
                         </a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="">
                             <div class="bg">
                                 <picture>
@@ -302,9 +310,9 @@
                                 <span class="lounge_date">2021. 07. 29</span>
                             </div>
                         </a>
-                    </li> -->
+                    </li>
                 </ul>
-                <div class="control_box">
+                <div class="control_box slick-arrow">
                     <div class="control_bar_wrap">
                         <div class="control_bar">
                             <span class="control_checked"></span>
@@ -363,7 +371,6 @@
             <a href="" class="btn_next"><span>더보기</span></a>
         </div>
     </div>
-
     <section class="section_now">
         <div class="section_wrap">
             <div class="section_in">
