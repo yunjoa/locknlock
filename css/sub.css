@@ -1,62 +1,45 @@
+@charset "UTF-8";
+@import url("font.css");
 p, span {
   word-break: keep-all;
   word-wrap: break-word;
 }
 
 * {
+  font-family: "Noto Sans Kr", sans-serif, "Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border-collapse: collapse;
+  color: #333;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "NotoSans", sans-serif;
-  color: #333;
-  font-size: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
+}
+
+img {
+  vertical-align: middle;
+}
+
+li {
   list-style: none;
 }
 
-a {
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-}
-
-video, img {
-  max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  vertical-align: bottom;
-}
-
-button {
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
-section {
-  display: block;
+h1, h2, h3, h4, h5, h6, p {
+  word-break: keep-all;
+  word-wrap: break-word;
 }
 
 .section_cover_wrap .section_cover {
   width: 100%;
   height: 100vh;
   position: relative;
-  border: #380202 solid 3px;
+  overflow: hidden;
 }
 
-.section_cover_wrap .section_cover .bg, .section_cover_wrap .section_cover .bg img, .section_cover_wrap .section_cover .bg video {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.section_cover_wrap .section_cover .s_content {
+.t_content {
   width: 60%;
+  vertical-align: middle;
   position: absolute;
   top: 50%;
   left: 20%;
@@ -64,118 +47,201 @@ section {
           transform: translateY(-50%);
 }
 
-.section_cover_wrap .section_cover .s_content .intro_top span {
+.t_content .sub_h2 {
+  font-size: 2.8rem;
+  line-height: 4rem;
+  font-weight: 600;
+}
+
+.t_content .sub_h2_con {
+  width: 400px;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  font-weight: 200;
+  padding: 15px 0 30px 0;
+  display: block;
+}
+
+.intro_top, .intro_content {
+  width: 100%;
+  margin: 0 auto;
+  white-space: pre-line;
+}
+
+.intro_top span, .intro_content span {
+  padding-bottom: 30px;
   display: inline-block;
-  padding: 0 0 50px;
 }
 
-.section_cover_wrap .section_cover .s_content .intro_top span img {
-  width: 80%;
+.intro_top span img, .intro_content span img {
+  width: 100%;
 }
 
-.section_cover_wrap .section_cover .s_content .intro_content p {
-  width: 500px;
+.intro_top p, .intro_content p {
   font-size: 1.2rem;
   line-height: 1.8rem;
-  font-weight: 500;
-  padding: 20px 0;
 }
 
-.section_philosophy_wrap .section_philosophy {
+.section_philosophy {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: rosybrown;
+  overflow: hidden;
 }
 
-.section_philosophy_wrap .section_philosophy .bg, .section_philosophy_wrap .section_philosophy .bg img, .section_philosophy_wrap .section_philosophy .bg video {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.section_philosophy_wrap .section_philosophy .section_txt {
+.section_philosophy .s_content {
   width: 60%;
-  margin: auto;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.section_philosophy_wrap .section_philosophy .section_txt .section_txt_tit {
-  font-size: 2.8rem;
+.section_philosophy .s_content .phsphy_txt {
+  font-size: 4.5rem;
   line-height: 4rem;
   font-weight: 600;
+  color: #101820;
 }
 
-.section_philosophy_wrap .section_philosophy .section_txt .section_txt_sub {
-  width: 400px;
-  font-size: 1rem;
-  line-height: 1.7rem;
-  font-weight: 200;
-  padding: 15px 0 30px 0;
-  display: block;
+.section_philosophy .s_content .phsphy_bar {
+  width: 300px;
+  height: 50px;
+  background: #101820;
+  margin: 0 15px;
+  display: inline-block;
 }
 
-.section_philosophy_wrap .section_philosophy .section_txt .btn_next {
-  padding: 14px 30px;
-  border: 1px solid black;
-}
-
-.section_philosophy_wrap .section_philosophy .s_content {
+.logo_page {
+  width: 60%;
+  margin: 0 auto;
   position: absolute;
-  width: 80%;
-  top: 40%;
+  top: 50%;
   left: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.section_application_wrap .section_application {
-  border: royalblue 1px solid;
+.logo_page .logo_pad {
+  width: 45%;
+}
+
+.logo_page .logo_content {
+  width: 45%;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  font-weight: 200;
+  padding-bottom: 10px;
+}
+
+.logo_page .logo_content .logo_txt {
+  padding-bottom: 20px;
+}
+
+.section_application {
   width: 100%;
   height: 100vh;
-  position: relative;
 }
 
-.section_application_wrap .section_application .bg, .section_application_wrap .section_application .bg img, .section_application_wrap .section_application .bg video {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.section_application_wrap .section_application .section_txt {
+.app_1 {
   width: 60%;
-  margin: auto;
+  margin: 0 auto;
 }
 
-.section_application_wrap .section_application .section_txt .section_txt_tit {
-  font-size: 2.8rem;
-  line-height: 4rem;
-  font-weight: 600;
+.app_1 .a_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.section_application_wrap .section_application .section_txt .section_txt_sub {
-  width: 400px;
-  font-size: 1rem;
-  line-height: 1.7rem;
-  font-weight: 200;
-  padding: 15px 0 30px 0;
-  display: block;
+.app_1 .a_content .flow_col {
+  height: 100vh;
+  overflow: hidden;
+  padding-left: 100px;
 }
 
-.section_application_wrap .section_application .section_txt .btn_next {
-  padding: 14px 30px;
-  border: 1px solid black;
+.app_2 {
+  overflow: hidden;
 }
 
-.section_application_wrap .section_application .s_content {
-  position: absolute;
-  width: 80%;
-  top: 40%;
-  left: 20%;
+.app_2 .a_content .flow_row img {
+  vertical-align: top;
+  width: 100%;
+}
+
+.app_end_txts {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  padding: 250px 0;
+}
+
+.app_end_txts img {
+  padding: 30px 0;
+}
+
+footer {
+  background: grey;
+  text-align: center;
+  padding: 50px;
+}
+
+.scroll_bar_wrap {
+  position: relative;
+  z-index: 5000;
+}
+
+.scroll_bar_wrap .scroll_bar {
+  position: fixed;
+  right: 0.8%;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.scroll_bar_wrap .scroll_bar .scroll_mark {
+  width: 100px;
+  height: 40px;
+  padding-right: 12px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-weight: 400;
+  border: none;
+  background: none;
+  border-right: 3px solid rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+}
+
+.scroll_bar_wrap .scroll_bar .scroll_mark:hover {
+  border-right: 3px solid #333;
+}
+
+.scroll_bar_wrap .scroll_bar .scroll_mark a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.scroll_bar_wrap .scroll_bar .scroll_mark a:hover {
+  color: #333;
 }
 /*# sourceMappingURL=sub.css.map */

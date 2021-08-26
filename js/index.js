@@ -1,142 +1,88 @@
-window.onload = function init() {
+$(function(){
 
-        
-    var dep1_menus = document.querySelector('.dep1_menus')
-    function darkOrLight (red, green, blue){
-        var brightness;
-        brightness = (red * 299) + (green * 587) + (blue * 114);
-        brightness = brightness / 255000;
-        // values range from 0 to 1
-        // anything greater than 0.5 should be bright enough for dark text
-        if (brightness >= 0.5) {
-            return "dep1_menus.style.color='#666'";
-        } else {
-            return "dep1_menus.style.color='white'";
-        }
-    };
-    darkOrLight ();
-    
+    $('header').on('mouseenter', function(){
+        $(this).css('background','white');
+        $('.header_svg > path').css('fill','black')
+        $('.dep1_menus > a').css('color','black')
+        $('.current_lang').css('color','black')
+        $('.icon_search > span').css('color','black')
+        $('.header').addClass('h_underline');
 
 
-
-
-    // const menuli = document.querySelectorAll('.dep1_menus');
-    // const subMenu = document.querySelectorAll('.sub_wrap');
-
-    // menuli.addEventListener('mouseenter', function(){
-    //     subMenu.slidedown(300);
-    // })
-
-
-
-
-    
-    // header.addEventListener('mouseover', () =>
-    // todo 헤더에 마우스 오버하면 배경 생김
-    // 헤더에 마우스 아웃하면 배경 없어짐)
-
-
-
-    
-    // function getTextColorByBackgroundColor(dep1Menu) {
-    //     const c = dep1Menu.substring(1)      // 색상 앞의 # 제거
-    //     const rgb = parseInt(c, 16)   // rrggbb를 10진수로 변환
-    //     const r = (rgb >> 16) & 0xff  // red 추출
-    //     const g = (rgb >>  8) & 0xff  // green 추출
-    //     const b = (rgb >>  0) & 0xff  // blue 추출
-    //     const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b // per ITU-R BT.709
-    //     // 색상 선택
-    //     return luma < 127.5 ? "white" : "black" // 글자색이
-    // }
-    
-
-    // const dep1Menu = document.querySelector('.dep1_menus > a');
-    // getTextColorByBackgroundColor(dep1Menu);
-    // console.log(dep1Menu)
-
-    
-
-
-
-// 슬라이드다운 : 실패. 금방 내려감
-function navFun(){
-    $('.dep1_menus').on({
-        mouseenter:function(){
-            $('header').stop().slideDown(200);
-        },
-        mouseleave:function(){
-            $('header').stop().slideUp(200);
-        }
-    });
-
-
-    $('header').on({
-        mouseenter:function(){
-            $('header').stop().slideDown(200);
-        },
-        mouseleave:function(){
-            $('header').stop().slideUp(200);
-        }
-    });
-}    
-
-
-// 헤더 배경 하얗게 
-
-function headerBg (){
-    $(header).on({
-        mouseenter:function(){
-            $(this).style.background('white')
-        }
     })
-}
+    $('header').on('mouseleave', function(){
+        $(this).css('background','transparent');
+        $('.header_svg > path').css('fill','white')
+        $('.dep1_menus > a').css('color','white')
+        $('.current_lang').css('color','white')
+        $('.icon_search > span').css('color','white')
+        $('.header').removeClass('h_underline');
 
-    // 네비 스크롤시 하이드 쇼 
-    (function(){
-
-        var doc = document.documentElement;
-        var w = window;
-        var prevScroll = w.scrollY ||  doc.scrollTop;
-        var curScroll;
-        var direction = 0;
-        var prevDirection = 0;
-        var header = document.querySelector('.header');
-        var checkScroll = function() {
         
-                /*
-            ** Find the direction of scroll
-            ** 0 - initial, 1 - up, 2 - down
-            */
-            curScroll = w.scrollY || doc.scrollTop;
-            if (curScroll > prevScroll) { 
-                //scrolled up
-                direction = 2;
-            } else if (curScroll < prevScroll) { 
-                //scrolled down
-                direction = 1;
-            }
+    })
 
-            if (direction !== prevDirection) {
-                toggleHeader(direction, curScroll);
-            }
-            prevScroll = curScroll;
-        };
-
-
-        var toggleHeader = function(direction, curScroll) {
-            if (direction === 2 && curScroll > 64) { 
-                header.classList.add('hide');
-                prevDirection = direction;
-
-            } else if (direction === 1) {
-                header.classList.remove('hide');
-                prevDirection = direction;
-
-            }
-        };
+    $('.dep1_menus').on('mouseenter',function(){
+        $('main').addClass('blur');
+        $('.header').addClass('white');
+        $('.header').addClass('h_underline');
         
-        window.addEventListener('scroll', checkScroll);
-    })();
+    });
+    
+    $('.dep1_menus').on('mouseleave',function(){
+        $('main').removeClass('blur');
+        $('.header').removeClass('white');
+        $('.header').removeClass('h_underline');
+        
+    });
+
+
+
+
+
+
+    //스크롤 업 다운에 따라 메뉴 숨기기
+    let pos = {y:0,y2:0,state:true}
+    $(window).on('scroll',function(){
+        pos.y = $(this).scrollTop();
+        if(pos.y > pos.y2){
+            //scroll down
+            pos.state = true;
+        }else{
+            //scroll up
+            pos.state = false;
+        }
+        pos.y2 = pos.y;
+        
+        if(pos.state){
+            $('.header').addClass('active');
+            $(this).css('background','white');
+
+        }else{
+            $('.header').removeClass('active');
+            $(this).css('background','transparent');
+
+        }
+
+        if($(this).scrollTop() > $(window).height()){
+            $('.header').addClass('white');
+            $('.header').css('background','white');
+
+            $('.header_svg > path').css('fill','black')
+            $('.dep1_menus > a').css('color','black')
+            $('.current_lang').css('color','black')
+            $('.icon_search > span').css('color','black')
+    
+        }else{
+            $('.header').removeClass('white');
+            $('.header').css('background','transparent');
+
+        }
+
+    });
+
+
+
+
 
 
 
@@ -156,9 +102,11 @@ function headerBg (){
     });
     
     $(".lounge_slider").slick({
+        centerMode: true,
+        centerPadding: '60px',
         arrows:true,
-        dots: true,
-        infinite: true,
+        dots: false,
+        infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay:false,
@@ -167,4 +115,59 @@ function headerBg (){
     });
 
 
+
+// 라운지 슬라이더 프로그레스바    
+
+$(".lounge_slider").on('afterChange',function(event,slick, currentSlide){
+    // var curIdx = $(".lounge_slider .slick-active").attr("data-slick-index"); 
+    //-> function(event,slick, currentSlide) 대체가능
+
+    // curIdx = parseInt(curIdx);
+
+    $(".control_bar > span").animate({
+        "width": (33.3 * (currentSlide+1))+"%"
+    },300);
+
+    $('.swipe_current').text(currentSlide+1) 
+});
+
+
+
+
+    
+
+
+// scroll시 fadein
+
+function isElementUnderBottom(elem, triggerDiff) {
+    const { top } = elem.getBoundingClientRect();
+    const { innerHeight } = window;
+    return top > innerHeight + (triggerDiff || 0);
 }
+
+function handleScroll() {
+    const elems = document.querySelectorAll('.up-on-scroll');
+    elems.forEach(elem => {
+        if (isElementUnderBottom(elem, -20)) {
+        console.log('scroll')
+        elem.style.opacity = "0";
+        elem.style.transform = 'translateY(70px)';
+    } else {
+        elem.style.opacity = "1";
+        elem.style.transform = 'translateY(0px)';
+    }
+    })
+}
+
+window.addEventListener('scroll', handleScroll);
+;
+
+
+
+
+
+
+
+
+
+});

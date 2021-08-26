@@ -1,66 +1,190 @@
-@import '_mixin.scss';
-
-
-*{margin: 0; padding: 0; box-sizing: border-box;
-    font-family: "NotoSans", sans-serif; color: #333;
-    font-size: 1rem; font-size: 1rem; line-height: 1.6;
-    list-style:none;
-}
-
-a{text-decoration-line:none;}
-video, img{max-width: 100%; object-fit: cover; vertical-align: bottom;}
-button{padding: 0; border: 0; background: transparent;}
-section{display: block;}
-
-
-
-
+@import '_mixin';
+@import '_common';
 
 
 .section_cover_wrap{
     .section_cover{
-        @include sectionHeight;
-        @include img_fit;
-        border: rgb(56, 2, 2) solid 3px;
-        .s_content{
-            width: 60%;
-            @include sectionAbsoluteCenter;
-            .intro_top{
-                span{
-                    display: inline-block;
-                    padding: 0 0 50px;
-                    img{
-                        width: 80%
-                    }
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+
+
+.t_content{
+    width: 60%; 
+    vertical-align: middle;
+    position: absolute;
+    top: 50%; left: 20%;
+    transform: translateY(-50%);
+    .sub_h2{
+        @include section_txt_tit;
+    }
+    .sub_h2_con{
+        @include section_txt_sub;
+    }
+}
+
+
+.intro_top, .intro_content{
+        width: 100%;
+        margin: 0 auto;
+        white-space: pre-line;
+        span{
+            padding-bottom: 30px;
+            display: inline-block;
+            img{width: 100%;}
+        }
+        p{
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+    }
+
+
+
+
+.section_philosophy{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .s_content{
+        width: 60%; 
+        vertical-align: middle;
+        position: absolute;
+        top: 50%; left: 20%;
+        transform: translateY(-50%);
+        .phsphy_txt{
+            font-size: 4.5rem;
+            line-height: 4rem;
+            font-weight: 600;
+            color: #101820;
+        }
+        .phsphy_bar{
+            width: 300px;
+            height: 50px;
+            background: #101820;
+            margin: 0 15px;
+            display: inline-block;
+            
+        }
+    }
+}
+
+
+.logo_page{
+    width: 60%;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 50%; left: 20%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo_pad{
+        width: 45%;
+    }
+    .logo_content{
+        width: 45%;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        font-weight: 200; 
+        padding-bottom: 10px; 
+        .logo_txt{
+            padding-bottom: 20px;
+        }
+    }
+}
+
+
+.section_application {
+    width: 100%;
+    height: 100vh;
+}
+.app_1{
+    width: 60%;
+    margin: 0 auto;
+    .a_content{
+        display: flex;
+        justify-content: space-between;
+        .flow_col{
+            height: 100vh;
+            overflow: hidden;
+            padding-left: 100px;
+        }
+    }
+}
+.app_2{
+    overflow: hidden;
+    .a_content{
+        .flow_row{
+            img{
+                vertical-align: top;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.app_end_txts{
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    padding: 250px 0;
+    img{
+        padding: 30px 0;
+    }
+}
+
+
+footer{
+    background: grey;
+    text-align: center;
+    padding: 50px;
+}
+
+
+
+.scroll_bar_wrap {
+    position: relative;
+    z-index: 5000;
+    .scroll_bar{
+        position: fixed;
+        right: 0.8%;
+        bottom: 50%;
+        transform: translateY(50%);
+        display: flex;
+        flex-direction: column;
+        .scroll_mark {
+            width: 100px;
+            height: 40px;
+            padding-right: 12px;
+            margin-bottom: 10px;
+            text-align: right;
+            font-weight: 400;
+
+            border: none;
+            background: none;
+            border-right: 3px solid rgba(0,0,0,0.3);
+            vertical-align: middle;
+            &:hover {
+                border-right: 3px solid #333;
+            }
+            a{
+                color:rgba(0,0,0,0.3);
+                &:hover {
+                    color:#333;
                 }
             }
-            .intro_content{
-                p{
-                    width: 500px;
-                    font-size: 1.2rem;
-                    line-height: 1.8rem;
-                    font-weight: 500;
-                    padding: 20px 0;
-                }
-            }
+            
+        
         }
     }
 }
-.section_philosophy_wrap{
-    .section_philosophy{
-        @include sec_comb;
-        background: rosybrown;
-        .s_content{
-            @include sectionAbsolute;
-        }
-    }
-}
-.section_application_wrap{
-    .section_application{
-        border: royalblue 1px solid;
-        @include sec_comb;
-        .s_content{
-            @include sectionAbsolute;
-        }
-    }
-}
+
